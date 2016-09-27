@@ -168,7 +168,7 @@ module.exports = function(grunt) {
   grunt.registerTask("uglify", "Uglifies bugsnag.js", function() {
     var exec = require("child_process").exec;
     var done = this.async();
-    exec("./bin/uglify.js", function(error, stdout) {
+    exec("node ./bin/uglify.js", function(error, stdout) {
       if (error != null) {
         console.log("Error running uglify.js: " + error);
       }
